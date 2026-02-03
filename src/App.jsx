@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import Landing from './pages/Landing'
 import Dashboard from './pages/Dashboard'
 import Contracts from './pages/Contracts'
 import ContractDetail from './pages/ContractDetail'
@@ -11,8 +12,9 @@ import Documents from './pages/Documents'
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<Landing />} />
       <Route element={<Layout />}>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/contracts" element={<Contracts />} />
         <Route path="/contracts/:id" element={<ContractDetail />} />
         <Route path="/expenses" element={<Expenses />} />

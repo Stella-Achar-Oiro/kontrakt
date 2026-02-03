@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, Briefcase, Receipt, FileText, ClipboardList, FolderOpen, HardHat } from 'lucide-react';
 
 const navItems = [
-  { to: '/', icon: LayoutDashboard, label: 'Dashboard' },
+  { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/contracts', icon: Briefcase, label: 'Contracts' },
   { to: '/expenses', icon: Receipt, label: 'Expenses' },
   { to: '/invoices', icon: FileText, label: 'Invoices' },
@@ -28,7 +28,7 @@ export default function Sidebar() {
           <NavLink
             key={to}
             to={to}
-            end={to === '/'}
+            end
             className={({ isActive }) =>
               `flex items-center gap-3 px-4 py-3 rounded-lg text-[15px] font-medium transition-colors ${
                 isActive
